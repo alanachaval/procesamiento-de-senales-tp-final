@@ -1,8 +1,11 @@
+import sys
+
 import matplotlib.pyplot as plt
 
 from datapreparation.file_reader import FileReader
 
-folder = "C:/Alan/Untref/ProcesamientoDeSenales/Final/Data"
+folder = sys.argv[1]
+
 databases = ['aami-ec13', 'edb', 'ltstdb', 'mitdb']
 
 for index, signal in enumerate(FileReader(folder, databases[0])):
