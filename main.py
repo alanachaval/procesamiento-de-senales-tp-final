@@ -3,10 +3,11 @@ import matplotlib.pyplot as plt
 from datapreparation.file_reader import FileReader
 
 folder = "C:/Alan/Untref/ProcesamientoDeSenales/Final/Data"
+databases = ['aami-ec13', 'edb', 'ltstdb', 'mitdb']
 
-for index, signal in enumerate(FileReader(folder)):
+for index, signal in enumerate(FileReader(folder, databases[0])):
     fig = plt.figure(index)
-    fig.canvas.set_window_title(signal.name)
-    plt.plot(signal.timeline, signal.values)
+    fig.canvas.set_window_title(signal.record.record_name)
+    plt.plot(signal.timeline, signal.record.p_signal)
 
 plt.show()
