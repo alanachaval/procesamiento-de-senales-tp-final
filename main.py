@@ -31,7 +31,7 @@ if __name__ == "__main__":
     # violin_c4.transformarFourier().graficar()
     # plt.title("Violin C4 en Frecuencia")
     # plt.show()
-    #
+
     # violin.comparar_transformada(1)
     # violin.comparar_tiempo(2, 240)
     # plt.show()
@@ -48,29 +48,29 @@ if __name__ == "__main__":
     # flauta_b5.transformarFourier().graficar()
     # plt.title("Flauta B5 en Frecuencia")
     # plt.show()
-    #
+
     # flauta.comparar_transformada(1)
     # flauta.comparar_tiempo(2, 240)
     # plt.show()
 
-    trombon_a2 = inst.Lector.leer_wav('Notas/trombon-a2.wav', "Trombon A2")
-    trombon_c3 = inst.Lector.leer_wav('Notas/trombon-c3.wav', "Trombon C3")
-    trombon_g3 = inst.Lector.leer_wav('Notas/trombon-g3.wav', "Trombon G3")
-    trombon = inst.Instrumento([trombon_a2, trombon_c3, trombon_g3], "Trombon")
+    oboe_b5 = inst.Lector.leer_wav('Notas/oboe-b5.wav', "Oboe B5")
+    oboe_c4 = inst.Lector.leer_wav('Notas/oboe-c4.wav', "Oboe C4")
+    oboe_g5 = inst.Lector.leer_wav('Notas/oboe-g5.wav', "Oboe G5")
+    oboe = inst.Instrumento([oboe_b5, oboe_c4, oboe_g5], "Oboe")
 
     # plt.figure(1)
-    # trombon_a2.graficar(240)
-    # plt.title("Trombon A2 en Tiempo")
+    # oboe_b5.graficar(240)
+    # plt.title("Oboe B5 en Tiempo")
     # plt.figure(2)
-    # trombon_a2.transformarFourier().graficar()
-    # plt.title("Trombon A2 en Frecuencia")
-    # plt.show()
-    #
-    # trombon.comparar_transformada(1)
-    # trombon.comparar_tiempo(2, 240)
+    # oboe_b5.transformarFourier().graficar()
+    # plt.title("Oboe B5 en Frecuencia")
     # plt.show()
 
-    # comparaciones = inst.Instrumento([guitarra_d5, violin_c4, flauta_b5], "Comparaciones")
+    # oboe.comparar_transformada(1)
+    # oboe.comparar_tiempo(2, 240)
+    # plt.show()
+
+    # comparaciones = inst.Instrumento([guitarra_d5, violin_c4, flauta_b5, oboe_b5], "Comparaciones")
     # comparaciones.comparar_transformada(1)
     # comparaciones.comparar_tiempo(2, 240)
     # plt.show()
